@@ -12,6 +12,7 @@ pipeline {
             sh '''
             mvn clean install
             java --version
+            java -jar target/singleton-1.0.jar
             '''
             }
         }
