@@ -33,12 +33,12 @@ pipeline {
         }
     }
 
-   /* post {
+   post {
 
-     always() {
+     always {
 
-
+       junit 'target/surefire-reports/TEST-org.example.test.SingletonTest.xml'
      }
 
-    }*/
+    }
 }
