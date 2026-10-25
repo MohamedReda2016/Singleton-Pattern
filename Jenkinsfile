@@ -37,7 +37,7 @@ pipeline {
 
      always {
        junit 'target/surefire-reports/TEST-org.example.test.SingletonTest.xml'
-       publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'target/reports/surefire.html', reportFiles: 'surefire.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+       publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'target/reports', reportFiles: 'surefire.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
      }
 
     }
