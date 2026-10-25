@@ -27,7 +27,7 @@ pipeline {
                     }
                     steps {
                     sh '''
-                    mvn test
+                    mvn test surefire-reports:report
                     '''
                     }
         }
@@ -36,8 +36,8 @@ pipeline {
    post {
 
      always {
-
        junit 'target/surefire-reports/TEST-org.example.test.SingletonTest.xml'
+       publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: 'target/reports/surefire.html', reportFiles: 'surefire.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
      }
 
     }
