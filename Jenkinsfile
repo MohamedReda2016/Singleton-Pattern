@@ -27,7 +27,7 @@ pipeline {
                     }
                     steps {
                     sh '''
-                    mvn test surefire-reports:report
+                    mvn test surefire-report:report
                     '''
                     }
         }
